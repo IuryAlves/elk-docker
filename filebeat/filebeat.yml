@@ -1,0 +1,9 @@
+filebeat.prospectors:
+  - input_type: log
+    enabled: true
+    tags: ["docker"]
+    paths:
+      - /home/filebeat/logs/*
+output.logstash:
+  hosts: ["logstash:5044"]
+
